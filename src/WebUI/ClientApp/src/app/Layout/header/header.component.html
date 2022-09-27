@@ -1,5 +1,5 @@
 <!--begin::Header-->
-<div id="kt_header" style="" class="header align-items-stretch">
+<div id="kt_header" class="header align-items-stretch">
     <!--begin::Container-->
     <div class="container-fluid d-flex align-items-stretch justify-content-between">
         <!--begin::Aside mobile toggle-->
@@ -3947,8 +3947,7 @@
                             <!--end::Menu item-->
                             <!--begin::Menu item-->
                             <div class="menu-item px-5">
-                                <a href="../../demo1/dist/authentication/flows/basic/sign-in.html"
-                                    class="menu-link px-5">Sign Out</a>
+                                <a [routerLink]='["/authentication/logout"]' [state]='{ local: true }' class="menu-link px-5">Sign Out</a>
                             </div>
                             <!--end::Menu item-->
                             <!--begin::Menu separator-->
