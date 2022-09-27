@@ -1,0 +1,61 @@
+@using Microsoft.AspNetCore.Hosting
+@using Microsoft.AspNetCore.Mvc.ViewEngines
+@inject IWebHostEnvironment Environment
+@inject ICompositeViewEngine Engine
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>@ViewData["Title"] - Clinic Login MS </title>
+ 
+    <link href="~/assets/plugins/global/plugins.bundle.css" rel="stylesheet" type="text/css" />
+    <link href="~/assets/css/style.bundle.css" rel="stylesheet" type="text/css" />
+</head>
+
+<body>
+    <!--end::Head-->
+    <!--begin::Body-->
+
+    <body id="kt_body" class="bg-dark">
+        <!--begin::Main-->
+        <div class="d-flex flex-column flex-root">
+            <!--begin::Authentication - Sign-in -->
+            <div class="d-flex flex-column flex-column-fluid bgi-position-y-bottom position-x-center bgi-no-repeat bgi-size-contain bgi-attachment-fixed"
+                style="background-image: url(../../assets/media/14-dark.png">
+                <partial name="_CookieConsentPartial" optional />
+                <!--begin::Content-->
+                @RenderBody()
+                <!--end::Content-->
+                <!--begin::Footer-->
+                <div class="d-flex flex-center flex-column-auto p-10">
+                    <!--begin::Links-->
+                    <div class="d-flex align-items-center fw-bold fs-6">
+                        <a href="https://keenthemes.com" class="text-muted text-hover-primary px-2">About</a>
+                        <a href="mailto:support@keenthemes.com" class="text-muted text-hover-primary px-2">Contact</a>
+                        <a href="https://1.envato.market/EA4JP" class="text-muted text-hover-primary px-2">Contact Us</a>
+                    </div>
+                    <!--end::Links-->
+                </div>
+                <!--end::Footer-->
+            </div>
+            <!--end::Authentication - Sign-in-->
+        </div>
+        <!--end::Main-->
+
+    </body>
+    <!--end::Body-->
+ 
+    <script>var hostUrl = "assets/";</script>
+    <!--begin::Javascript-->
+    <!--begin::Global Javascript Bundle(used by all pages)-->
+    <script src="~/assets/plugins/global/plugins.bundle.js"></script>
+    <script src="~/assets/js/scripts.bundle.js"></script>
+    <!--end::Global Javascript Bundle--> 
+    <!--end::Javascript-->
+
+    @await RenderSectionAsync("Scripts", required: false)
+</body>
+
+</html>
