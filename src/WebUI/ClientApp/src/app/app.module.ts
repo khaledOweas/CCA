@@ -17,6 +17,13 @@ import { TokenComponent } from './token/token.component';
 import { ApiAuthorizationModule } from 'src/api-authorization/api-authorization.module';
 import { AuthorizeInterceptor } from 'src/api-authorization/authorize.interceptor';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+import { ModalComponent } from './Layout/modal/modal.component';
+import { ScrolltopComponent } from './Layout/scrolltop/scrolltop.component';
+import { DrawersComponent } from './Layout/drawers/drawers.component';
+import { AsideComponent } from './Layout/aside/aside.component';
+import { HeaderComponent } from './Layout/header/header.component';
+import { FooterComponent } from './Layout/footer/footer.component';
+import { ToolBarComponent } from './Layout/tool-bar/tool-bar.component';
 
 
 @NgModule({
@@ -27,7 +34,14 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
     CounterComponent,
     FetchDataComponent,
     TodoComponent,
-    TokenComponent
+    TokenComponent,
+    ModalComponent,
+    ScrolltopComponent,
+    DrawersComponent,
+    AsideComponent,
+    HeaderComponent,
+    FooterComponent,
+    ToolBarComponent
   ],
   imports: [
     BrowserModule.withServerTransition({ appId: 'ng-cli-universal' }),

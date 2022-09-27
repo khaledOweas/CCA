@@ -30,8 +30,7 @@ export class LogoutComponent implements OnInit {
         } else {
           // This prevents regular links to <app>/authentication/logout from triggering a logout
           this.message.next('The logout was not initiated from within the page.');
-        }
-
+        } 
         break;
       case LogoutActions.LogoutCallback:
         await this.processLogoutCallback();

@@ -1,6 +1,49 @@
-<body>
-  <app-nav-menu></app-nav-menu>
-  <div class="container">
-    <router-outlet></router-outlet>
+<!--begin::Main-->
+<!--begin::Root-->
+<div class="d-flex flex-column flex-root">
+  <!--begin::Page-->
+  <div class="page d-flex flex-row flex-column-fluid">
+    <!--begin::Aside-->
+    <app-aside></app-aside>
+    <!--end::Aside-->
+    <!--begin::Wrapper-->
+    <div class="wrapper d-flex flex-column flex-row-fluid" id="kt_wrapper">
+      <!--begin::Header-->
+      <app-header></app-header>
+      <!--end::Header-->
+      <!--begin::Content-->
+      <div class="content d-flex flex-column flex-column-fluid" id="kt_content">
+        <!--begin::Toolbar-->
+        <app-tool-bar></app-tool-bar>
+        <!--end::Toolbar-->
+        <!--begin::Post-->
+        <div class="post d-flex flex-column-fluid" id="kt_post">
+          <!--begin::Container-->
+          <div id="kt_content_container" class="container-xxl">
+            <router-outlet></router-outlet>
+            <!--end::Row-->
+          </div>
+          <!--end::Container-->
+        </div>
+        <!--end::Post-->
+      </div>
+      <!--end::Content-->
+      <!--begin::Footer-->
+      <app-footer></app-footer>
+      <!--end::Footer-->
+    </div>
+    <!--end::Wrapper-->
   </div>
-</body>
+  <!--end::Page-->
+</div>
+<!--end::Root-->
+<!--begin::Drawers-->
+<app-drawers></app-drawers>
+<!--end::Drawers-->
+<!--begin::Modals-->
+<app-modal></app-modal>
+<!--end::Modals-->
+<!--begin::Scrolltop-->
+<app-scrolltop></app-scrolltop>
+<!--end::Scrolltop-->
+<!--end::Main-->
