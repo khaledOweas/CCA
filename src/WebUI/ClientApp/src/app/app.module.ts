@@ -24,6 +24,7 @@ import { AsideComponent } from './Layout/aside/aside.component';
 import { HeaderComponent } from './Layout/header/header.component';
 import { FooterComponent } from './Layout/footer/footer.component';
 import { ToolBarComponent } from './Layout/tool-bar/tool-bar.component';
+import { TranslocoRootModule } from './transloco-root.module';
 
 
 @NgModule({
@@ -50,7 +51,8 @@ import { ToolBarComponent } from './Layout/tool-bar/tool-bar.component';
     ApiAuthorizationModule,
     AppRoutingModule,
     BrowserAnimationsModule,
-    ModalModule.forRoot()
+    ModalModule.forRoot(),
+    TranslocoRootModule
   ],
   providers: [
     { provide: HTTP_INTERCEPTORS, useClass: AuthorizeInterceptor, multi: true }

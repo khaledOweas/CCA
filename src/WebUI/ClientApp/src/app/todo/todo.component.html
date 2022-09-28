@@ -1,17 +1,41 @@
 <h1>Todo</h1>
+<div>
 
+  <ng-container *transloco="let t">
+    hello <span>{{ t('hello') }}</span>
+    <a href="" [title]="t('hello')"> hello</a>
+  </ng-container>
+
+  <ng-container *transloco="let t">
+    <p>{{ t('name', { v1: 'khaled' }) }}</p>
+  </ng-container>
+  <div>
+    <hr>
+    <ng-container *transloco="let t; lang: 'es'">
+      <p>{{ t('hello') }}</p>
+    </ng-container>
+
+    <ng-container *transloco="let t; lang: 'en'">
+      <p>{{ t('hello') }}</p>
+    </ng-container>
+
+    <ng-container *transloco="let t; lang: 'ar'">
+      <p>{{ t('hello') }}</p>
+    </ng-container>
+    <hr>
+    {{'hello' | transloco }} <br>
+    {{'name' | transloco : {v1 : "Medo"} }}
+  </div>
+
+</div>
 <p>This is a complex todo list component.</p>
-
 <p *ngIf="!lists"><em>Loading...</em></p>
-
 <div *ngIf="lists">
-
   <div class="row">
     <div class="col-sm-4">
       <div class="clearfix">
         <h2 class="float-start">Lists</h2>
-        <button class="btn btn-default float-end" title="New List..."
-          (click)="showNewListModal(newListModalTemplate)">
+        <button class="btn btn-default float-end" title="New List..." (click)="showNewListModal(newListModalTemplate)">
           <i class="bi bi-journal-plus"></i>
         </button>
       </div>
