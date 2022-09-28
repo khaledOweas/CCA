@@ -12,11 +12,13 @@ export const routes: Routes = [
   { path: 'counter', component: CounterComponent, canActivate: [AuthorizeGuard] },
   { path: 'fetch-data', component: FetchDataComponent, canActivate: [AuthorizeGuard] },
   { path: 'todo', component: TodoComponent, canActivate: [AuthorizeGuard] },
-  { path: 'token', component: TokenComponent, canActivate: [AuthorizeGuard] }
+  { path: 'token', component: TokenComponent, canActivate: [AuthorizeGuard] },
+  { path: '**', component: HomeComponent }
+
 ];
 
 @NgModule({
   imports: [RouterModule.forRoot(routes)],
   exports: [RouterModule],
 })
-export class AppRoutingModule {}
+export class AppRoutingModule { }
