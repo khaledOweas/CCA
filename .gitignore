@@ -236,3 +236,4 @@ _Pvt_Extensions
 /CCA.ndproj
 /.mfractor
 src/WebUI/ClientApp/package-lock.json
+**/.DS_Store
