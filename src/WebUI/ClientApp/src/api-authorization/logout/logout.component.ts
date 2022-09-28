@@ -30,13 +30,14 @@ export class LogoutComponent implements OnInit {
         } else {
           // This prevents regular links to <app>/authentication/logout from triggering a logout
           this.message.next('The logout was not initiated from within the page.');
-        } 
+        }
         break;
       case LogoutActions.LogoutCallback:
         await this.processLogoutCallback();
         break;
       case LogoutActions.LoggedOut:
-        this.message.next('You successfully logged out!');
+        // this.message.next('You successfully logged out!');
+        await this.navigateToReturnUrl(ApplicationPaths.Login);
         break;
       default:
         throw new Error(`Invalid action '${action}'`);
@@ -63,7 +64,8 @@ export class LogoutComponent implements OnInit {
           throw new Error('Invalid authentication result status.');
       }
     } else {
-      this.message.next('You successfully logged out!');
+      await this.navigateToReturnUrl(ApplicationPaths.Login);
+      //  this.message.next('You successfully logged out!');
     }
   }
 

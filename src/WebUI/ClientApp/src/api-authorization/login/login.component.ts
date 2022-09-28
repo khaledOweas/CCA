@@ -107,7 +107,8 @@ export class LoginComponent implements OnInit {
       !(fromQuery.startsWith(`${window.location.origin}/`) ||
         /\/[^\/].*/.test(fromQuery))) {
       // This is an extra check to prevent open redirects.
-      throw new Error('Invalid return url. The return url needs to have the same origin as the current page.');
+      this.navigateToReturnUrl(fromQuery);
+     // throw new Error('Invalid return url. The return url needs to have the same origin as the current page.');
     }
     return (state && state.returnUrl) ||
       fromQuery ||
